@@ -48,7 +48,7 @@ def get_parser():
     parser = argparse.ArgumentParser(description='Skeleton-based Action Recgnition')
     parser.add_argument('--seed', type=int, default=1, help='seed')
     parser.add_argument('--work_dir', default='./work_dir/ntu/temp', help='the work folder for storing results')
-    parser.add_argument('--config', default='./config/ntu/ntu26_xsub_joint.yaml', help='path to the configuration file')
+    parser.add_argument('--config', default='./config/h2o/h2o_train_htt_split.yaml', help='path to the configuration file')
 
     # processor
     parser.add_argument('--run_mode', default='train', help='must be train or test')
@@ -69,7 +69,7 @@ def get_parser():
     # model
     parser.add_argument('--model', default=None, help='the model will be used')
     parser.add_argument('--model_args', default=dict(), help='the arguments of model')
-    parser.add_argument('--weights', default=None, help='the weights for model testing')
+    parser.add_argument('--weights', default= './exp/h2o/htt_split/htt_split.pt' , help='the weights for model testing')
     parser.add_argument('--ignore_weights', type=str, default=[], nargs='+', help='the name of weights which will be ignored in the initialization')
 
     # optim
