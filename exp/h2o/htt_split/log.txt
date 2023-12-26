@@ -1,0 +1,293 @@
+[ 2023-12-26 15:48 ] Model load finished: model.ISTANet.Model
+[ 2023-12-26 15:48 ] Data load finished
+[ 2023-12-26 15:48 ] Optimizer load finished: AdamW
+[ 2023-12-26 15:48 ] base_lr: 0.001
+[ 2023-12-26 15:48 ] batch_size: 16
+[ 2023-12-26 15:48 ] config: config/h2o/h2o_train_htt_split.yaml
+[ 2023-12-26 15:48 ] cuda_visible_device: 6,7
+[ 2023-12-26 15:48 ] device: [0, 1]
+[ 2023-12-26 15:48 ] eval_interval: 2
+[ 2023-12-26 15:48 ] feeder: feeders.feeder_h2o.Feeder
+[ 2023-12-26 15:48 ] ignore_weights: []
+[ 2023-12-26 15:48 ] loss: LabelSmoothingCrossEntropy
+[ 2023-12-26 15:48 ] loss_args: {'smoothing': 0.15, 'temperature': 1.0}
+[ 2023-12-26 15:48 ] lr_decay_rate: 0.2
+[ 2023-12-26 15:48 ] model: model.ISTANet.Model
+[ 2023-12-26 15:48 ] model_args: {'window_size': [20, 1, 3], 'num_frames': 120, 'num_joints': 21, 'num_persons': 3, 'num_channels': 3, 'num_classes': 36, 'num_heads': 3, 'kernel_size': [3, 5], 'use_pes': True, 'config': [[64, 64, 16], [64, 64, 16], [64, 128, 32], [128, 128, 32], [128, 256, 64], [256, 256, 64], [256, 256, 64], [256, 256, 64]]}
+[ 2023-12-26 15:48 ] nesterov: True
+[ 2023-12-26 15:48 ] num_epoch: 100
+[ 2023-12-26 15:48 ] num_worker: 8
+[ 2023-12-26 15:48 ] optimizer: AdamW
+[ 2023-12-26 15:48 ] optimizer_betas: [0.9, 0.999]
+[ 2023-12-26 15:48 ] print_log: True
+[ 2023-12-26 15:48 ] run_mode: train
+[ 2023-12-26 15:48 ] save_epoch: 80
+[ 2023-12-26 15:48 ] save_score: False
+[ 2023-12-26 15:48 ] seed: 1
+[ 2023-12-26 15:48 ] show_topk: [1, 5]
+[ 2023-12-26 15:48 ] start_epoch: 0
+[ 2023-12-26 15:48 ] step: [35, 60, 80, 95, 120]
+[ 2023-12-26 15:48 ] test_batch_size: 16
+[ 2023-12-26 15:48 ] test_feeder_args: {'data_path': '/mnt/cvda/zhangzhining/h2o/h2o_htt_split_pth', 'split': 'val', 'debug': False, 'window_size': 120, 'p_interval': [0.95], 'vel': False, 'bone': False}
+[ 2023-12-26 15:48 ] train_feeder_args: {'data_path': '/mnt/cvda/zhangzhining/h2o/h2o_htt_split_pth', 'split': 'train', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': 120, 'normalization': False, 'random_rot': True, 'p_interval': [0.5, 1], 'vel': False, 'bone': False, 'entity_rearrangement': False}
+[ 2023-12-26 15:48 ] warm_up_epoch: 5
+[ 2023-12-26 15:48 ] weight_decay: 0.0004
+[ 2023-12-26 15:48 ] weights: None
+[ 2023-12-26 15:48 ] work_dir: ./exp/h2o/htt_split
+[ 2023-12-26 15:48 ] # Parameters: 6068444
+[ 2023-12-26 15:48 ] ###***************start training***************###
+[ 2023-12-26 15:48 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:48 ] training: epoch: 1, loss: 4.9828, top1: 12.50%, lr: 0.000200
+[ 2023-12-26 15:48 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:48 ] training: epoch: 2, loss: 3.6824, top1: 35.42%, lr: 0.000400
+[ 2023-12-26 15:48 ] evaluating: loss: 2.7051, top1: 43.48%, best_acc: 43.48%
+[ 2023-12-26 15:48 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:48 ] training: epoch: 3, loss: 3.1574, top1: 43.75%, lr: 0.000600
+[ 2023-12-26 15:48 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:48 ] training: epoch: 4, loss: 2.1207, top1: 45.83%, lr: 0.000800
+[ 2023-12-26 15:48 ] evaluating: loss: 1.9811, top1: 43.48%, best_acc: 43.48%
+[ 2023-12-26 15:48 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:48 ] training: epoch: 5, loss: 2.0774, top1: 58.33%, lr: 0.001000
+[ 2023-12-26 15:48 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:48 ] training: epoch: 6, loss: 1.8832, top1: 60.42%, lr: 0.001000
+[ 2023-12-26 15:48 ] evaluating: loss: 1.7757, top1: 43.48%, best_acc: 43.48%
+[ 2023-12-26 15:48 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:48 ] training: epoch: 7, loss: 2.0749, top1: 45.83%, lr: 0.001000
+[ 2023-12-26 15:48 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:48 ] training: epoch: 8, loss: 1.8653, top1: 43.75%, lr: 0.001000
+[ 2023-12-26 15:48 ] evaluating: loss: 2.0372, top1: 52.17%, best_acc: 52.17%
+[ 2023-12-26 15:48 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:48 ] training: epoch: 9, loss: 1.9056, top1: 56.25%, lr: 0.001000
+[ 2023-12-26 15:48 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:48 ] training: epoch: 10, loss: 1.9095, top1: 37.50%, lr: 0.001000
+[ 2023-12-26 15:48 ] evaluating: loss: 1.7272, top1: 43.48%, best_acc: 52.17%
+[ 2023-12-26 15:48 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:48 ] training: epoch: 11, loss: 1.6826, top1: 52.08%, lr: 0.001000
+[ 2023-12-26 15:48 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:49 ] training: epoch: 12, loss: 1.6888, top1: 62.50%, lr: 0.001000
+[ 2023-12-26 15:49 ] evaluating: loss: 1.6927, top1: 43.48%, best_acc: 52.17%
+[ 2023-12-26 15:49 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:49 ] training: epoch: 13, loss: 1.7201, top1: 47.92%, lr: 0.001000
+[ 2023-12-26 15:49 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:49 ] training: epoch: 14, loss: 1.7060, top1: 60.42%, lr: 0.001000
+[ 2023-12-26 15:49 ] evaluating: loss: 1.6890, top1: 43.48%, best_acc: 52.17%
+[ 2023-12-26 15:49 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:49 ] training: epoch: 15, loss: 1.6703, top1: 50.00%, lr: 0.001000
+[ 2023-12-26 15:49 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:49 ] training: epoch: 16, loss: 1.5441, top1: 56.25%, lr: 0.001000
+[ 2023-12-26 15:49 ] evaluating: loss: 1.8405, top1: 52.17%, best_acc: 52.17%
+[ 2023-12-26 15:49 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:49 ] training: epoch: 17, loss: 1.6101, top1: 54.17%, lr: 0.001000
+[ 2023-12-26 15:49 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:49 ] training: epoch: 18, loss: 1.7054, top1: 54.17%, lr: 0.001000
+[ 2023-12-26 15:49 ] evaluating: loss: 1.6119, top1: 39.13%, best_acc: 52.17%
+[ 2023-12-26 15:49 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:49 ] training: epoch: 19, loss: 1.6840, top1: 50.00%, lr: 0.001000
+[ 2023-12-26 15:49 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:49 ] training: epoch: 20, loss: 1.6207, top1: 62.50%, lr: 0.001000
+[ 2023-12-26 15:49 ] evaluating: loss: 1.5698, top1: 60.87%, best_acc: 60.87%
+[ 2023-12-26 15:49 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:49 ] training: epoch: 21, loss: 1.5136, top1: 66.67%, lr: 0.001000
+[ 2023-12-26 15:49 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:49 ] training: epoch: 22, loss: 1.6105, top1: 54.17%, lr: 0.001000
+[ 2023-12-26 15:49 ] evaluating: loss: 1.6033, top1: 60.87%, best_acc: 60.87%
+[ 2023-12-26 15:49 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:49 ] training: epoch: 23, loss: 1.6210, top1: 60.42%, lr: 0.001000
+[ 2023-12-26 15:49 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:49 ] training: epoch: 24, loss: 1.5531, top1: 68.75%, lr: 0.001000
+[ 2023-12-26 15:49 ] evaluating: loss: 1.5768, top1: 65.22%, best_acc: 65.22%
+[ 2023-12-26 15:49 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:49 ] training: epoch: 25, loss: 1.5719, top1: 62.50%, lr: 0.001000
+[ 2023-12-26 15:49 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:49 ] training: epoch: 26, loss: 1.6142, top1: 58.33%, lr: 0.001000
+[ 2023-12-26 15:49 ] evaluating: loss: 1.5832, top1: 56.52%, best_acc: 65.22%
+[ 2023-12-26 15:49 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:49 ] training: epoch: 27, loss: 1.6636, top1: 62.50%, lr: 0.001000
+[ 2023-12-26 15:49 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:49 ] training: epoch: 28, loss: 1.5761, top1: 58.33%, lr: 0.001000
+[ 2023-12-26 15:49 ] evaluating: loss: 1.5152, top1: 52.17%, best_acc: 65.22%
+[ 2023-12-26 15:49 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:49 ] training: epoch: 29, loss: 1.5008, top1: 62.50%, lr: 0.001000
+[ 2023-12-26 15:49 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:49 ] training: epoch: 30, loss: 1.5391, top1: 62.50%, lr: 0.001000
+[ 2023-12-26 15:49 ] evaluating: loss: 1.5025, top1: 60.87%, best_acc: 65.22%
+[ 2023-12-26 15:49 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:49 ] training: epoch: 31, loss: 1.6462, top1: 58.33%, lr: 0.001000
+[ 2023-12-26 15:49 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:49 ] training: epoch: 32, loss: 1.5521, top1: 52.08%, lr: 0.001000
+[ 2023-12-26 15:49 ] evaluating: loss: 1.6007, top1: 47.83%, best_acc: 65.22%
+[ 2023-12-26 15:49 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:49 ] training: epoch: 33, loss: 1.6094, top1: 50.00%, lr: 0.001000
+[ 2023-12-26 15:49 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:49 ] training: epoch: 34, loss: 1.7428, top1: 45.83%, lr: 0.001000
+[ 2023-12-26 15:49 ] evaluating: loss: 1.4763, top1: 60.87%, best_acc: 65.22%
+[ 2023-12-26 15:49 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:49 ] training: epoch: 35, loss: 1.5597, top1: 60.42%, lr: 0.001000
+[ 2023-12-26 15:49 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:49 ] training: epoch: 36, loss: 1.5617, top1: 58.33%, lr: 0.000200
+[ 2023-12-26 15:49 ] evaluating: loss: 1.4938, top1: 65.22%, best_acc: 65.22%
+[ 2023-12-26 15:49 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:49 ] training: epoch: 37, loss: 1.4920, top1: 62.50%, lr: 0.000200
+[ 2023-12-26 15:49 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:49 ] training: epoch: 38, loss: 1.5495, top1: 54.17%, lr: 0.000200
+[ 2023-12-26 15:49 ] evaluating: loss: 1.4881, top1: 60.87%, best_acc: 65.22%
+[ 2023-12-26 15:49 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:49 ] training: epoch: 39, loss: 1.4583, top1: 68.75%, lr: 0.000200
+[ 2023-12-26 15:49 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:49 ] training: epoch: 40, loss: 1.5782, top1: 64.58%, lr: 0.000200
+[ 2023-12-26 15:49 ] evaluating: loss: 1.4961, top1: 65.22%, best_acc: 65.22%
+[ 2023-12-26 15:49 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:49 ] training: epoch: 41, loss: 1.4102, top1: 70.83%, lr: 0.000200
+[ 2023-12-26 15:49 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:49 ] training: epoch: 42, loss: 1.5071, top1: 60.42%, lr: 0.000200
+[ 2023-12-26 15:49 ] evaluating: loss: 1.5058, top1: 65.22%, best_acc: 65.22%
+[ 2023-12-26 15:49 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:49 ] training: epoch: 43, loss: 1.4521, top1: 77.08%, lr: 0.000200
+[ 2023-12-26 15:49 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:49 ] training: epoch: 44, loss: 1.4718, top1: 70.83%, lr: 0.000200
+[ 2023-12-26 15:49 ] evaluating: loss: 1.5147, top1: 69.57%, best_acc: 69.57%
+[ 2023-12-26 15:49 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:49 ] training: epoch: 45, loss: 1.4993, top1: 56.25%, lr: 0.000200
+[ 2023-12-26 15:49 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:50 ] training: epoch: 46, loss: 1.4438, top1: 75.00%, lr: 0.000200
+[ 2023-12-26 15:50 ] evaluating: loss: 1.4858, top1: 73.91%, best_acc: 73.91%
+[ 2023-12-26 15:50 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:50 ] training: epoch: 47, loss: 1.4975, top1: 75.00%, lr: 0.000200
+[ 2023-12-26 15:50 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:50 ] training: epoch: 48, loss: 1.5076, top1: 75.00%, lr: 0.000200
+[ 2023-12-26 15:50 ] evaluating: loss: 1.4832, top1: 60.87%, best_acc: 73.91%
+[ 2023-12-26 15:50 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:50 ] training: epoch: 49, loss: 1.3999, top1: 79.17%, lr: 0.000200
+[ 2023-12-26 15:50 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:50 ] training: epoch: 50, loss: 1.4277, top1: 72.92%, lr: 0.000200
+[ 2023-12-26 15:50 ] evaluating: loss: 1.4666, top1: 73.91%, best_acc: 73.91%
+[ 2023-12-26 15:50 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:50 ] training: epoch: 51, loss: 1.4484, top1: 77.08%, lr: 0.000200
+[ 2023-12-26 15:50 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:50 ] training: epoch: 52, loss: 1.5594, top1: 66.67%, lr: 0.000200
+[ 2023-12-26 15:50 ] evaluating: loss: 1.4382, top1: 73.91%, best_acc: 73.91%
+[ 2023-12-26 15:50 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:50 ] training: epoch: 53, loss: 1.4482, top1: 77.08%, lr: 0.000200
+[ 2023-12-26 15:50 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:50 ] training: epoch: 54, loss: 1.4399, top1: 70.83%, lr: 0.000200
+[ 2023-12-26 15:50 ] evaluating: loss: 1.4526, top1: 69.57%, best_acc: 73.91%
+[ 2023-12-26 15:50 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:50 ] training: epoch: 55, loss: 1.3756, top1: 87.50%, lr: 0.000200
+[ 2023-12-26 15:50 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:50 ] training: epoch: 56, loss: 1.4227, top1: 77.08%, lr: 0.000200
+[ 2023-12-26 15:50 ] evaluating: loss: 1.4453, top1: 73.91%, best_acc: 73.91%
+[ 2023-12-26 15:50 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:50 ] training: epoch: 57, loss: 1.3596, top1: 81.25%, lr: 0.000200
+[ 2023-12-26 15:50 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:50 ] training: epoch: 58, loss: 1.4289, top1: 70.83%, lr: 0.000200
+[ 2023-12-26 15:50 ] evaluating: loss: 1.4220, top1: 78.26%, best_acc: 78.26%
+[ 2023-12-26 15:50 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:50 ] training: epoch: 59, loss: 1.3775, top1: 72.92%, lr: 0.000200
+[ 2023-12-26 15:50 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:50 ] training: epoch: 60, loss: 1.3308, top1: 89.58%, lr: 0.000200
+[ 2023-12-26 15:50 ] evaluating: loss: 1.4054, top1: 78.26%, best_acc: 78.26%
+[ 2023-12-26 15:50 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:50 ] training: epoch: 61, loss: 1.3671, top1: 79.17%, lr: 0.000040
+[ 2023-12-26 15:50 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:50 ] training: epoch: 62, loss: 1.3539, top1: 79.17%, lr: 0.000040
+[ 2023-12-26 15:50 ] evaluating: loss: 1.4200, top1: 82.61%, best_acc: 82.61%
+[ 2023-12-26 15:50 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:50 ] training: epoch: 63, loss: 1.4093, top1: 79.17%, lr: 0.000040
+[ 2023-12-26 15:50 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:50 ] training: epoch: 64, loss: 1.3941, top1: 79.17%, lr: 0.000040
+[ 2023-12-26 15:50 ] evaluating: loss: 1.4218, top1: 82.61%, best_acc: 82.61%
+[ 2023-12-26 15:50 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:50 ] training: epoch: 65, loss: 1.2563, top1: 93.75%, lr: 0.000040
+[ 2023-12-26 15:50 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:50 ] training: epoch: 66, loss: 1.3731, top1: 79.17%, lr: 0.000040
+[ 2023-12-26 15:50 ] evaluating: loss: 1.4090, top1: 82.61%, best_acc: 82.61%
+[ 2023-12-26 15:50 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:50 ] training: epoch: 67, loss: 1.3616, top1: 77.08%, lr: 0.000040
+[ 2023-12-26 15:50 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:50 ] training: epoch: 68, loss: 1.3012, top1: 83.33%, lr: 0.000040
+[ 2023-12-26 15:50 ] evaluating: loss: 1.4067, top1: 78.26%, best_acc: 82.61%
+[ 2023-12-26 15:50 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:50 ] training: epoch: 69, loss: 1.2731, top1: 89.58%, lr: 0.000040
+[ 2023-12-26 15:50 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:50 ] training: epoch: 70, loss: 1.3048, top1: 81.25%, lr: 0.000040
+[ 2023-12-26 15:50 ] evaluating: loss: 1.4048, top1: 82.61%, best_acc: 82.61%
+[ 2023-12-26 15:50 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:50 ] training: epoch: 71, loss: 1.3656, top1: 83.33%, lr: 0.000040
+[ 2023-12-26 15:50 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:50 ] training: epoch: 72, loss: 1.3597, top1: 79.17%, lr: 0.000040
+[ 2023-12-26 15:50 ] evaluating: loss: 1.4119, top1: 82.61%, best_acc: 82.61%
+[ 2023-12-26 15:50 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:50 ] training: epoch: 73, loss: 1.2512, top1: 93.75%, lr: 0.000040
+[ 2023-12-26 15:50 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:50 ] training: epoch: 74, loss: 1.3839, top1: 75.00%, lr: 0.000040
+[ 2023-12-26 15:50 ] evaluating: loss: 1.3996, top1: 78.26%, best_acc: 82.61%
+[ 2023-12-26 15:50 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:50 ] training: epoch: 75, loss: 1.3228, top1: 83.33%, lr: 0.000040
+[ 2023-12-26 15:50 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:50 ] training: epoch: 76, loss: 1.3049, top1: 83.33%, lr: 0.000040
+[ 2023-12-26 15:50 ] evaluating: loss: 1.3840, top1: 82.61%, best_acc: 82.61%
+[ 2023-12-26 15:50 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:50 ] training: epoch: 77, loss: 1.3385, top1: 83.33%, lr: 0.000040
+[ 2023-12-26 15:50 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:50 ] training: epoch: 78, loss: 1.3217, top1: 83.33%, lr: 0.000040
+[ 2023-12-26 15:50 ] evaluating: loss: 1.3876, top1: 78.26%, best_acc: 82.61%
+[ 2023-12-26 15:50 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:51 ] training: epoch: 79, loss: 1.4164, top1: 75.00%, lr: 0.000040
+[ 2023-12-26 15:51 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:51 ] training: epoch: 80, loss: 1.2916, top1: 87.50%, lr: 0.000040
+[ 2023-12-26 15:51 ] evaluating: loss: 1.3657, top1: 91.30%, best_acc: 91.30%
+[ 2023-12-26 15:51 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:51 ] training: epoch: 81, loss: 1.4484, top1: 75.00%, lr: 0.000008
+[ 2023-12-26 15:51 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:51 ] training: epoch: 82, loss: 1.4029, top1: 85.42%, lr: 0.000008
+[ 2023-12-26 15:51 ] evaluating: loss: 1.3629, top1: 86.96%, best_acc: 91.30%
+[ 2023-12-26 15:51 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:51 ] training: epoch: 83, loss: 1.3182, top1: 83.33%, lr: 0.000008
+[ 2023-12-26 15:51 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:51 ] training: epoch: 84, loss: 1.3831, top1: 79.17%, lr: 0.000008
+[ 2023-12-26 15:51 ] evaluating: loss: 1.4150, top1: 82.61%, best_acc: 91.30%
+[ 2023-12-26 15:51 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:51 ] training: epoch: 85, loss: 1.2640, top1: 93.75%, lr: 0.000008
+[ 2023-12-26 15:51 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:51 ] training: epoch: 86, loss: 1.3020, top1: 85.42%, lr: 0.000008
+[ 2023-12-26 15:51 ] evaluating: loss: 1.3757, top1: 78.26%, best_acc: 91.30%
+[ 2023-12-26 15:51 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:51 ] training: epoch: 87, loss: 1.3998, top1: 79.17%, lr: 0.000008
+[ 2023-12-26 15:51 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:51 ] training: epoch: 88, loss: 1.3486, top1: 79.17%, lr: 0.000008
+[ 2023-12-26 15:51 ] evaluating: loss: 1.3714, top1: 91.30%, best_acc: 91.30%
+[ 2023-12-26 15:51 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:51 ] training: epoch: 89, loss: 1.2790, top1: 91.67%, lr: 0.000008
+[ 2023-12-26 15:51 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:51 ] training: epoch: 90, loss: 1.3163, top1: 79.17%, lr: 0.000008
+[ 2023-12-26 15:51 ] evaluating: loss: 1.3723, top1: 91.30%, best_acc: 91.30%
+[ 2023-12-26 15:51 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:51 ] training: epoch: 91, loss: 1.3570, top1: 79.17%, lr: 0.000008
+[ 2023-12-26 15:51 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:51 ] training: epoch: 92, loss: 1.2846, top1: 87.50%, lr: 0.000008
+[ 2023-12-26 15:51 ] evaluating: loss: 1.3722, top1: 82.61%, best_acc: 91.30%
+[ 2023-12-26 15:51 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:51 ] training: epoch: 93, loss: 1.3174, top1: 83.33%, lr: 0.000008
+[ 2023-12-26 15:51 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:51 ] training: epoch: 94, loss: 1.2637, top1: 85.42%, lr: 0.000008
+[ 2023-12-26 15:51 ] evaluating: loss: 1.3728, top1: 82.61%, best_acc: 91.30%
+[ 2023-12-26 15:51 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:51 ] training: epoch: 95, loss: 1.2747, top1: 89.58%, lr: 0.000008
+[ 2023-12-26 15:51 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:51 ] training: epoch: 96, loss: 1.3255, top1: 85.42%, lr: 0.000002
+[ 2023-12-26 15:51 ] evaluating: loss: 1.3653, top1: 82.61%, best_acc: 91.30%
+[ 2023-12-26 15:51 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:51 ] training: epoch: 97, loss: 1.3546, top1: 75.00%, lr: 0.000002
+[ 2023-12-26 15:51 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:51 ] training: epoch: 98, loss: 1.2877, top1: 89.58%, lr: 0.000002
+[ 2023-12-26 15:51 ] evaluating: loss: 1.3656, top1: 82.61%, best_acc: 91.30%
+[ 2023-12-26 15:51 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:51 ] training: epoch: 99, loss: 1.3149, top1: 83.33%, lr: 0.000002
+[ 2023-12-26 15:51 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 15:51 ] training: epoch: 100, loss: 1.3771, top1: 72.92%, lr: 0.000002
+[ 2023-12-26 15:51 ] evaluating: loss: 1.3651, top1: 82.61%, best_acc: 91.30%
+[ 2023-12-26 15:51 ] Done.
+
+[ 2023-12-26 15:54 ] Load weights from ./exp/h2o/htt_split/htt_split.pt
+[ 2023-12-26 15:54 ] Model load finished: model.ISTANet.Model
+[ 2023-12-26 15:54 ] Data load finished
