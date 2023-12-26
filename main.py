@@ -69,7 +69,7 @@ def get_parser():
     # model
     parser.add_argument('--model', default=None, help='the model will be used')
     parser.add_argument('--model_args', default=dict(), help='the arguments of model')
-    parser.add_argument('--weights', default= './exp/h2o/htt_split/htt_split.pt' , help='the weights for model testing')
+    parser.add_argument('--weights', default= None , help='the weights for model testing')
     parser.add_argument('--ignore_weights', type=str, default=[], nargs='+', help='the name of weights which will be ignored in the initialization')
 
     # optim
@@ -316,7 +316,7 @@ class Processor():
                 prec = accuracy(output.data, label, topk=(1,))
                 top1.update(prec[0].item(), data.size(0))
                 losses.update(loss.item())
-
+                
                 if wrong_file is not None or result_file is not None:
                     predict = list(predict_label.cpu().numpy())
                     true = list(label.data.cpu().numpy())
@@ -326,6 +326,8 @@ class Processor():
                         if x != true[i] and wrong_file is not None:
                             f_w.write(str(sampie[i]) + ',' + str(x) + ',' + str(true[i]) + '\n')
 
+            print('label:', label_list)
+            print('pred:', pred_list)
             score = np.concatenate(score_frag)
             score_dict = dict(zip(self.data_loader[ln].dataset.sample_name, score))
 
@@ -410,7 +412,8 @@ class Processor():
                 save_model = (epoch + 1 == self.arg.num_epoch)
                 self.train(epoch, save_model=save_model)
 
-                if ((epoch + 1) % self.arg.eval_interval == 0):
+                #if ((epoch + 1) % self.arg.eval_interval == 0):
+                if epoch == self.arg.num_epoch - 1:
                     self.eval(epoch, save_score=self.arg.save_score, loader_name=['test'])
             self.print_log('Done.\n')
 

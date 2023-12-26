@@ -291,3 +291,69 @@
 [ 2023-12-26 15:54 ] Load weights from ./exp/h2o/htt_split/htt_split.pt
 [ 2023-12-26 15:54 ] Model load finished: model.ISTANet.Model
 [ 2023-12-26 15:54 ] Data load finished
+[ 2023-12-26 16:44 ] Load weights from ./exp/h2o/htt_split/htt_split.pt
+[ 2023-12-26 16:44 ] Model load finished: model.ISTANet.Model
+[ 2023-12-26 16:44 ] Data load finished
+[ 2023-12-26 16:44 ] Optimizer load finished: AdamW
+[ 2023-12-26 16:44 ] base_lr: 0.001
+[ 2023-12-26 16:44 ] batch_size: 16
+[ 2023-12-26 16:44 ] config: config/h2o/h2o_train_htt_split.yaml
+[ 2023-12-26 16:44 ] cuda_visible_device: 6,7
+[ 2023-12-26 16:44 ] device: [0, 1]
+[ 2023-12-26 16:44 ] eval_interval: 2
+[ 2023-12-26 16:44 ] feeder: feeders.feeder_h2o.Feeder
+[ 2023-12-26 16:44 ] ignore_weights: []
+[ 2023-12-26 16:44 ] loss: LabelSmoothingCrossEntropy
+[ 2023-12-26 16:44 ] loss_args: {'smoothing': 0.15, 'temperature': 1.0}
+[ 2023-12-26 16:44 ] lr_decay_rate: 0.2
+[ 2023-12-26 16:44 ] model: model.ISTANet.Model
+[ 2023-12-26 16:44 ] model_args: {'window_size': [20, 1, 3], 'num_frames': 120, 'num_joints': 21, 'num_persons': 3, 'num_channels': 3, 'num_classes': 36, 'num_heads': 3, 'kernel_size': [3, 5], 'use_pes': True, 'config': [[64, 64, 16], [64, 64, 16], [64, 128, 32], [128, 128, 32], [128, 256, 64], [256, 256, 64], [256, 256, 64], [256, 256, 64]]}
+[ 2023-12-26 16:44 ] nesterov: True
+[ 2023-12-26 16:44 ] num_epoch: 100
+[ 2023-12-26 16:44 ] num_worker: 8
+[ 2023-12-26 16:44 ] optimizer: AdamW
+[ 2023-12-26 16:44 ] optimizer_betas: [0.9, 0.999]
+[ 2023-12-26 16:44 ] print_log: True
+[ 2023-12-26 16:44 ] run_mode: train
+[ 2023-12-26 16:44 ] save_epoch: 80
+[ 2023-12-26 16:44 ] save_score: False
+[ 2023-12-26 16:44 ] seed: 1
+[ 2023-12-26 16:44 ] show_topk: [1, 5]
+[ 2023-12-26 16:44 ] start_epoch: 0
+[ 2023-12-26 16:44 ] step: [35, 60, 80, 95, 120]
+[ 2023-12-26 16:44 ] test_batch_size: 16
+[ 2023-12-26 16:44 ] test_feeder_args: {'data_path': '/mnt/cvda/zhangzhining/h2o/h2o_htt_split_pth', 'split': 'val', 'debug': False, 'window_size': 120, 'p_interval': [0.95], 'vel': False, 'bone': False}
+[ 2023-12-26 16:44 ] train_feeder_args: {'data_path': '/mnt/cvda/zhangzhining/h2o/h2o_htt_split_pth', 'split': 'train', 'debug': False, 'random_choose': False, 'random_shift': False, 'random_move': False, 'window_size': 120, 'normalization': False, 'random_rot': True, 'p_interval': [0.5, 1], 'vel': False, 'bone': False, 'entity_rearrangement': False}
+[ 2023-12-26 16:44 ] warm_up_epoch: 5
+[ 2023-12-26 16:44 ] weight_decay: 0.0004
+[ 2023-12-26 16:44 ] weights: None
+[ 2023-12-26 16:44 ] work_dir: ./exp/h2o/htt_split
+[ 2023-12-26 16:44 ] # Parameters: 6068444
+[ 2023-12-26 16:44 ] ###***************start training***************###
+[ 2023-12-26 16:44 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 16:45 ] training: epoch: 1, loss: 4.9828, top1: 12.50%, lr: 0.000200
+[ 2023-12-26 16:45 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 16:45 ] training: epoch: 2, loss: 3.6824, top1: 35.42%, lr: 0.000400
+[ 2023-12-26 16:45 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 16:45 ] training: epoch: 3, loss: 3.0511, top1: 50.00%, lr: 0.000600
+[ 2023-12-26 16:45 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 16:45 ] training: epoch: 4, loss: 2.2192, top1: 47.92%, lr: 0.000800
+[ 2023-12-26 16:45 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 16:45 ] training: epoch: 5, loss: 2.3215, top1: 56.25%, lr: 0.001000
+[ 2023-12-26 16:45 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 16:45 ] training: epoch: 6, loss: 2.1133, top1: 47.92%, lr: 0.001000
+[ 2023-12-26 16:45 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 16:45 ] training: epoch: 7, loss: 1.8655, top1: 56.25%, lr: 0.001000
+[ 2023-12-26 16:45 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 16:45 ] training: epoch: 8, loss: 1.8144, top1: 60.42%, lr: 0.001000
+[ 2023-12-26 16:45 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 16:45 ] training: epoch: 9, loss: 1.8364, top1: 43.75%, lr: 0.001000
+[ 2023-12-26 16:45 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 16:45 ] training: epoch: 10, loss: 1.8680, top1: 45.83%, lr: 0.001000
+[ 2023-12-26 16:45 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 16:45 ] training: epoch: 11, loss: 1.7131, top1: 52.08%, lr: 0.001000
+[ 2023-12-26 16:45 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 16:45 ] training: epoch: 12, loss: 1.7505, top1: 45.83%, lr: 0.001000
+[ 2023-12-26 16:45 ] adjust learning rate, using warm up, epoch: 5
+[ 2023-12-26 16:45 ] training: epoch: 13, loss: 1.6506, top1: 56.25%, lr: 0.001000
+[ 2023-12-26 16:45 ] adjust learning rate, using warm up, epoch: 5
